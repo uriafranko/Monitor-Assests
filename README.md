@@ -120,7 +120,7 @@ functions:
 * You can also change the rate(30 minutes) to what ever you want... 
 <br>you can find the rates syntax [here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)
 
-####And the magic happens once you execute this in your terminal:
+#### And the magic happens once you execute this in your terminal:
 ```terminal
 serverless deploy
 ```
@@ -131,7 +131,7 @@ Now if any asset or link in your website will be broken (Not found/ Server error
 
 ![Image of error email](https://i.ibb.co/ykHCxqC/Screenshot-2.png)
 
-#####Also if there's any error accessing your target you will get an email like that:
+##### Also if there's any error accessing your target you will get an email like that:
 ![Image of error email](https://i.ibb.co/tx3342x/Screenshot-3.png)  
 
 ### Keep in mind
