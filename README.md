@@ -1,16 +1,16 @@
 # Monitor Assets
 
-In this repo, I’ll show you how to create Monitor that keep an eye on your website and his assets.
+In this repo, I’ll show you how to create Monitor that keep an eye on your website and his assets.<br>
 We will be using Python3.7 + Serverless lambda
 
 ## Getting Started
 
 In order to go through this tutorial, make sure you have:
-* Installed Python 3.7
-* Installed Node.js v6.5.0 or later
-* AWS account with admin rights (You can create one for free [right here](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html))
+* Installed Python 3.7.
+* Installed Node.js v6.5.0 or later.
+* AWS account with admin rights (You can create one for free [right here](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)).
 
-### Here is the plan
+## Here is the plan
 
 1. Setup Serverless framework
 1. Get AWS credentials
@@ -18,7 +18,9 @@ In order to go through this tutorial, make sure you have:
 1. Deploy backend to Lambda
 1. Schedule running
 
-### Step 1: Serverless framework
+
+
+## Step 1: Serverless framework
 
 Let’s start from the beginning.
 <br>In order to easily write and deploy our lambda we will use this awesome framework called [Serverless](https://serverless.com/). 
@@ -37,7 +39,7 @@ It will create a new folder my-assets-monitor with two files:
 1. handler.py  — a template for your Python code
 1. serverless.yml — configuration file
 
-### Step 2: AWS Credentials
+## Step 2: AWS Credentials
 
 This is the best part of this process, because once you’ve got credentials,
 <br> you’ll never deal with AWS again. 
@@ -74,7 +76,7 @@ Also, you will need to create `requirements.txt` file and write:
 requests
 bs4
 ```
-and execute this command to install it locally:
+and execute this command to install the packages locally:
 ```text
 pip install -r requirements.txt -t vendored
 ```
@@ -110,11 +112,11 @@ functions:
           rate: rate(30 minutes)
 ```
 #### Notice that you need to change
-* AWS_KEY -> Your AWS key that we created
-* AWS_SECRET -> Your AWS key that we created
-* TARGET_URL -> The website that you want to monitor (Ex: 'https://google.com')
-* SOURCE_EMAIL -> Your verified email that you can get/verify [here](https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:)
-* DESTINATION_URL -> The email that the notifications will be sent to
+* **AWS_KEY** -> Your AWS key that we created
+* **AWS_SECRET** -> Your AWS key that we created
+* **TARGET_URL** -> The website that you want to monitor (Ex: 'https://google.com')
+* **SOURCE_EMAIL** -> Your verified email that you can get/verify [here](https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:)
+* **DESTINATION_URL** -> The email that the notifications will be sent to
 * You can also change the rate(30 minutes) to what ever you want... 
 <br>you can find the rates syntax [here](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html)
 
