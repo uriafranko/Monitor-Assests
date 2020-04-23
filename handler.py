@@ -11,7 +11,7 @@ import requests
 from bs4 import BeautifulSoup
 from mailer import Mailer
 
-mailer = Mailer(os.environ['TARGET_URL'], os.environ['SOURCE_EMAIL'], os.environ['DESTINATION_URL'],)
+mailer = Mailer(os.environ['TARGET_URL'], os.environ['SOURCE_EMAIL'], os.environ['DESTINATION_EMAIL'],)
 internal_urls = set()
 external_urls = set()
 
