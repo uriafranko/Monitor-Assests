@@ -1,6 +1,6 @@
 # Monitor Assets
 
-In this repo, I’ll show you how to create Monitor that keep an eye on your website and his assets.<br>
+In this repo, I’ll show you how to create a **Monitor** that keep an eye on your **website** and it **assets**.<br>
 We will be using Python3.7 + Serverless lambda
 
 ## Getting Started
