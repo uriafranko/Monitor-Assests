@@ -11,7 +11,7 @@ provider:
     TARGET_URL: ""
     SOURCE_EMAIL: ""
     DESTINATION_EMAIL: ""
-
+  memorySize: 256
 
 
 functions:
