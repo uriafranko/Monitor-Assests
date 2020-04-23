@@ -1,0 +1,24 @@
+service: my-asset-monitor
+
+provider:
+  name: aws
+  runtime: python3.7
+  stage: dev
+  region: us-east-1
+  environment:
+    AWS_KEY: ""
+    AWS_SECRET: ""
+    TARGET_URL: ""
+    SOURCE_EMAIL: ""
+    DESTINATION_EMAIL: ""
+
+
+
+functions:
+  post:
+    handler: handler.main
+    events:
+      - schedule:
+          name: asset-checker-schedule
+          description: 'Schedule asset checking every 30 minutes'
+          rate: rate(30 minutes)
