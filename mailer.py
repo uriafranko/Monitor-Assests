@@ -19,6 +19,8 @@ class Mailer:
         self.assets = []
 
     def send_mail(self):
+        if len(self.assets) == 0:
+            return
         subject = "Assets Monitor Asset Failure"
         body = f"""
         <h2>There's a problem with one of your assets!</h2>
@@ -26,6 +28,7 @@ class Mailer:
         """
         for link in self.assets:
             body += f'<a href="{link}"><p>{link}</p></a><br>'
+
         self.send(subject, body)
 
     def send_errors(self, errors):
